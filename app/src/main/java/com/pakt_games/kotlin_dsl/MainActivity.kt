@@ -41,15 +41,30 @@ class MainActivity : AppCompatActivity() {
         val text = sb.toString()
         println(text)*/
 
-        val stringBuilder = StringBuilder()
+        /*val stringBuilder = StringBuilder()
 
         val text = with(stringBuilder) {
             this.append("Scope Function")
             toString()
         }
 
-        println(text)
+        println(text)*/
 
+        /*val testString = "H@s@n"
 
+        infix fun String.changeCharacter(char: Char): String {
+            return this.replace(char,'a')
+        }
+
+        println(testString.changeCharacter('@'))
+
+        inlineFunction({ println("Service Events")})*/
+
+        Internet.checkInternet()
+
+    }
+    inline fun inlineFunction(myFun: () -> Unit ) {
+        myFun()
+        print("Check Internet Event")
     }
 }
